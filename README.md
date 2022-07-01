@@ -105,4 +105,7 @@ potentially multiple systems react to it.
 
 In this case the `activate a phone number` API may return `201 Accepted` to indicate the result of the activation is not known yet. 
 
+## Functional tests
+For better code coverage, functional tests should be added to the application.
+Functional tests are tests that are executed against a running application.
 
