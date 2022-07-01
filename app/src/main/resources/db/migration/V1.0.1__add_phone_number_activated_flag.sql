@@ -1,0 +1,1 @@
+alter table phone_number add activated BIT default 'FALSE' not null;

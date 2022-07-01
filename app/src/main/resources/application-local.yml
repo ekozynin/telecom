@@ -1,0 +1,4 @@
+logging:
+  level:
+    ROOT: INFO
+    com.telecom.customer: DEBUG

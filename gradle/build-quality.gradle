@@ -1,0 +1,24 @@
+// https://docs.gradle.org/current/dsl/org.gradle.api.plugins.quality.PmdExtension.html
+// https://pmd.github.io/pmd-6.23.0/pmd_userdocs_configuring_rules.html
+// https://pmd.github.io/pmd-6.23.0/pmd_rules_java.html
+
+pmd {
+    ignoreFailures = false
+    toolVersion = "${pmdVersion}"
+    consoleOutput = true
+
+    incrementalAnalysis = true
+
+    ruleSets = []
+    ruleSetFiles = files("${project.rootDir}/gradle/pmd/pmd-rules.xml")
+
+    pmdMain {
+        excludes = [
+                '**/com/telecom/customer/events/**/*.*'
+        ]
+    }
+}
+
+checkstyle {
+    configDirectory = file("${rootProject.projectDir}/gradle/checkstyle")
+}
